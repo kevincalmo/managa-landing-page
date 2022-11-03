@@ -1,0 +1,90 @@
+/* Je déclares des variables avec les couleurs pour mon code */
+:root{
+    --title-color: #242d53;
+    --button-color: #f2633c;
+    --text-color: #afb0b7;
+    --span-article-color: #f2633c;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header section */
+
+
+header{
+    background-image: url(/images/bg-tablet-pattern.svg);
+    padding: 50px 0;
+}
+
+/* Header Navigation */
+header .navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 5%;
+    margin-bottom: 20px;
+}
+
+header .navigation nav,
+header .navigation .mobile img:nth-child(2){
+    display: none;
+}
+
+header .navigation .mobile img:nth-child(1){
+    cursor: pointer;
+}
+
+/* Header Herobanner  */
+
+header .herobanner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header .herobanner .illustration img {
+    width: 100%;
+} 
+
+header .herobanner .content{
+    padding-inline: 5%;
+}
+
+header .herobanner .content h1,
+header .herobanner .content p{
+    text-align: center;
+}
+
+header .herobanner .content h1{
+    font-size: 2.5rem;
+    color: var(--title-color);
+}
+
+header .herobanner .content P{
+    margin: 20px 0;
+    font-size: 1.6rem;
+    line-height: 30px;
+    color: var(--text-color);
+}
+
+header .herobanner button {
+    margin: 20px 0;
+    background-color: var(--button-color);
+    padding: 10px 30px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    transition: 0.3s ease-in;
+}
+header .herobanner button:hover {
+    background-color: #c04d2d;
+    transition: 0.3s ease-in;
+}
+
+/* Fin du Header */
