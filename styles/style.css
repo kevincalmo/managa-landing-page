@@ -1,27 +1,57 @@
 /* Je déclares des variables avec les couleurs pour mon code */
-:root{
+:root {
     --title-color: #242d53;
     --button-color: #f2633c;
+    --button-shadow-color: #f2633c8e;
     --text-color: #afb0b7;
     --span-article-color: #f2633c;
+    --article-title: #fef0ea;
+    --background-avi: #f5f5f5;
+    --footer-background: #1f1f26;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body{
+    overflow-x: hidden;
+}
+
+p {
+    color: var(--text-color);
+}
+
+button {
+    margin: 20px 0;
+    background-color: var(--button-color);
+    padding: 10px 30px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    transition: 0.3s ease-in;
+    box-shadow: 0 10px 10px var(--button-shadow-color);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c04d2d;
+    transition: 0.3s ease-in;
+}
+
 /* Header section */
 
 
-header{
+header {
     background-image: url(/images/bg-tablet-pattern.svg);
-    padding: 50px 0;
+    padding: 20px 0;
 }
 
 /* Header Navigation */
-header .navigation{
+header .navigation {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -30,11 +60,11 @@ header .navigation{
 }
 
 header .navigation nav,
-header .navigation .mobile img:nth-child(2){
+header .navigation .mobile img:nth-child(2) {
     display: none;
 }
 
-header .navigation .mobile img:nth-child(1){
+header .navigation .mobile img:nth-child(1) {
     cursor: pointer;
 }
 
@@ -49,42 +79,503 @@ header .herobanner {
 
 header .herobanner .illustration img {
     width: 100%;
-} 
+}
 
-header .herobanner .content{
+header .herobanner .content {
     padding-inline: 5%;
 }
 
 header .herobanner .content h1,
-header .herobanner .content p{
+header .herobanner .content p {
     text-align: center;
 }
 
-header .herobanner .content h1{
+header .herobanner .content h1 {
     font-size: 2.5rem;
     color: var(--title-color);
 }
 
-header .herobanner .content P{
+header .herobanner .content P {
     margin: 20px 0;
     font-size: 1.6rem;
     line-height: 30px;
     color: var(--text-color);
 }
 
-header .herobanner button {
-    margin: 20px 0;
-    background-color: var(--button-color);
-    padding: 10px 30px;
-    font-size: 1.5rem;
-    border: none;
-    border-radius: 30px;
-    color: white;
-    transition: 0.3s ease-in;
-}
-header .herobanner button:hover {
-    background-color: #c04d2d;
-    transition: 0.3s ease-in;
+/* Fin du Header */
+
+/* Main */
+
+main section.section_principal,
+main section.section_secondaire {
+    margin: 50px auto;
+    padding-inline: 5%;
+    overflow-x: hidden;
 }
 
-/* Fin du Header */
+main section h2.title_section {
+    color: var(--title-color);
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 20px 0;
+    width: 100vw;
+}
+
+main section.section_principal .presentation p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main section.articles article {
+    margin: 35px auto;
+}
+
+main section.articles article h3 {
+    font-size: 1.1rem;
+    background-color: var(--article-title);
+    padding-right: 0;
+    padding: 7px 0;
+    margin-bottom: 10px;
+    width: 100vw;
+    border-radius: 20px;
+}
+
+main section.articles article h3 span {
+    background-color: var(--span-article-color);
+    color: white;
+    padding: inherit;
+    padding-inline: 30px;
+    border-radius: inherit;
+    margin-right: 15px;
+}
+
+/* Les avis / section secondaire */
+
+
+main section.section_secondaire .avis .avi:nth-child(2),
+main section.section_secondaire .avis .avi:nth-child(3),
+main section.section_secondaire .avis .avi:nth-child(4) {
+    display: none;
+}
+
+main section.section_secondaire .avis .avi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    width: 300px;
+    margin: 50px auto;
+}
+
+main section.section_secondaire .avis .avi img {
+    width: 70px;
+    position: relative;
+    bottom: -35px;
+}
+
+main section.section_secondaire .avis .avi h3 {
+    color: var(--title-color);
+    margin: 20px 0;
+    text-align: center;
+}
+
+main section.section_secondaire .avis .avi p {
+    font-size: 1.1rem;
+}
+
+main section.section_secondaire .avis .avi .content {
+    background-color: var(--background-avi);
+    padding: 40px 30px;
+}
+
+main section.section_secondaire button {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 80px;
+}
+
+/* Call to action */
+
+section.calltoaction {
+    width: 100vw;
+    padding-inline: 0;
+    background-color: var(--button-color);
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section.calltoaction p {
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+section.calltoaction button {
+    color: var(--button-color);
+    background-color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--footer-background);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* newsletter */
+footer section {
+    margin: 15px 0;
+}
+
+footer .newsletter input {
+    padding-inline: 5%;
+    border: none;
+    font-size: 1rem;
+    border-radius: 20px;
+    padding: 10px 0;
+    padding-left: 20px;
+    color: var(--text-color);
+}
+
+footer .newsletter button {
+    font-size: 1rem;
+    box-shadow: none;
+}
+
+footer .footer_links,
+footer .social-medias {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+footer .footer_links li {
+    list-style: none;
+    font-size: 1.1rem;
+}
+
+footer .social-medias .social-media img {
+    width: 35px;
+}
+
+footer .footer_logo img {
+    width: 150px;
+}
+
+footer .footer_links li:nth-child(2n+1) {
+    margin: 10px 0;
+}
+
+/* Media Queries */
+
+/* Adaptation pour les tablettes */
+@media screen and (min-width: 480px) {
+
+    /* header */
+    header .herobanner .content h1 {
+        font-size: 2.8rem;
+        color: var(--title-color);
+    }
+
+    header .herobanner .content P {
+        margin: 20px 0;
+        font-size: 1.6rem;
+        line-height: 30px;
+        color: var(--text-color);
+    }
+
+    /* Section principal */
+    main section h2.title_section {
+        font-size: 1.8rem;
+    }
+
+    main section.section_principal .presentation p {
+        font-size: 1.3rem;
+    }
+
+    main section.articles article h3 {
+        font-size: 1.4rem;
+    }
+
+    main section.articles article p {
+        font-size: 1.1rem;
+    }
+
+    /* Section secondaire */
+    main section.section_secondaire .avis .avi img {
+        bottom: -50px;
+    }
+
+    main section.section_secondaire .avis .avi h3 {
+        font-size: 1.4rem;
+    }
+
+    main section.section_secondaire .avis .avi p {
+        font-size: 1.3rem;
+    }
+
+    main section.section_secondaire .avis .avi .content {
+        padding: 50px 30px;
+    }
+
+    /* Footer */
+    /* newsletter */
+    footer .newsletter input {
+        font-size: 1.3rem;
+    }
+
+    footer .newsletter button {
+        font-size: 1.3rem;
+    }
+
+    footer .footer_links li {
+        font-size: 1.3rem;
+    }
+
+    footer .social-medias .social-media img {
+        width: 45px;
+    }
+
+    footer .footer_logo img {
+        width: 170px;
+    }
+
+}
+
+/* Adaptation pour les petits pc */
+@media screen and (min-width: 768px) {
+
+    /* header */
+    header .herobanner .content h1 {
+        font-size: 3.2rem;
+    }
+
+    header .herobanner .content P {
+        font-size: 1.8rem;
+    }
+
+    /* Section principal */
+    main section h2.title_section {
+        font-size: 2.1rem;
+    }
+
+    main section.section_principal .presentation p {
+        font-size: 1.5rem;
+    }
+
+    main section.articles article h3 {
+        font-size: 1.6rem;
+    }
+
+    main section.articles article p {
+        font-size: 1.3rem;
+    }
+
+    /* Section secondaire */
+
+    main section.section_secondaire .avis .avi:nth-child(2) {
+        display: flex;
+    }
+
+    main section.section_secondaire .avis {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+
+    main section.section_secondaire .avis .avi {
+        width: 320px;
+    }
+
+    main section.section_secondaire .avis .avi img {
+        bottom: -50px;
+    }
+
+    main section.section_secondaire .avis .avi h3 {
+        font-size: 1.4rem;
+    }
+
+    main section.section_secondaire .avis .avi p {
+        font-size: 1.3rem;
+    }
+
+    main section.section_secondaire .avis .avi .content {
+        padding: 50px 30px;
+    }
+
+    /* CalltoAction */
+    
+    section.calltoaction p {
+        font-size: 3.5rem;
+    }
+    
+    section.calltoaction button {
+        font-size: 1.5rem;
+    }
+
+    /* Footer */
+    /* newsletter */
+    footer .newsletter input {
+        font-size: 1.5rem;
+    }
+
+    footer .newsletter button {
+        font-size: 1.5rem;
+    }
+
+    footer .footer_links li {
+        font-size: 1.5rem;
+    }
+}
+
+/* Adaptation pour les pc */
+@media screen and (min-width: 1024px) {
+
+    /* Header */
+    header .navigation .mobile img:nth-child(1) {
+        display: none;
+    }
+
+    header .navigation nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    header .navigation nav li {
+        list-style: none;
+        font-size: 1.1rem;
+        margin-inline: 15px;
+        cursor: pointer;
+    }
+
+    header .navigation nav li button {
+        font-size: 0.8rem;
+        cursor: pointer;
+    }
+
+    header .herobanner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header .herobanner section {
+        width: 50%;
+    }
+    header .herobanner section.content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header .herobanner .content h1 {
+        font-size: 4.5rem;
+    }
+
+    header .herobanner .content P {
+        font-size: 2.5rem;
+        margin: 35px 0;
+        line-height: 45px;
+    }
+
+    header .herobanner .content button{
+        font-size: 3rem;
+    }
+
+    /* Section principal */
+    main section h2.title_section {
+        font-size: 2.5rem;
+    }
+
+    main section.section_principal .presentation p {
+        font-size: 1.7rem;
+    }
+
+    main section.articles article h3 {
+        font-size: 2.1rem;
+        width: 100%;
+    }
+
+    main section.articles article p {
+        font-size: 1.5rem;
+    }
+
+    /* Section secondaire */
+    main section.section_secondaire .avis .avi:nth-child(3) {
+        display: flex;
+    }
+    main section.section_secondaire .avis .avi {
+        width: 310px;
+    }
+
+    /* CalltoAction */
+    
+    section.calltoaction p {
+        font-size: 4rem;
+    }
+    
+    section.calltoaction button {
+        font-size: 2rem;
+    }
+
+    /* Footer */
+
+    footer section {
+        margin: 40px 0;
+    }
+}
+
+/* Adaptation pour les ecran bureaux et ecrans supérieurs */
+@media screen and (min-width: 1600px) {
+
+    main section.articles {
+        display: flex;
+    }
+
+    main section.articles article {
+        width: 30%;
+    }
+
+    main section.articles article h3 {
+        font-size: 1.5rem;
+        width: 100%;
+    }
+
+    main section.articles article p {
+        font-size: 1.4rem;
+    }
+    /* Section secondaire */
+    main section.section_secondaire .avis .avi:nth-child(4) {
+        display: flex;
+    }
+    main section.section_secondaire .avis .avi{
+        width: 360px;
+    }
+
+    /* CalltoAction */
+    
+    section.calltoaction p {
+        font-size: 4.5rem;
+    }
+    
+    section.calltoaction button {
+        font-size: 2.5rem;
+    }
+}
